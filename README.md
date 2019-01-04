@@ -33,7 +33,6 @@ and put the model into `ckpt_CNN`.
  ```
   python run_cnn.py \
   --input_vid_path=/path/to/toy_video \
-  --cache_dir=where_to_save_cache \
   --out_dir=where_to_save_output
   ```
 
@@ -43,7 +42,6 @@ and put the model into `ckpt_CNN`.
  ```Shell
   python run_lrcn.py \
   --input_vid_path=/path/to/toy_video \
-  --cache_dir=where_to_save_cache \
   --out_dir=where_to_save_output
   ```
 The probability of eye state will be put in `.p` file and a plot video will be generated.
