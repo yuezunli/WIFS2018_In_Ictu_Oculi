@@ -1,0 +1,32 @@
+# img_h, img_w, img_c
+IMG_SIZE: [224, 224, 3]
+# BGR pixel mean value
+#PIXEL_MEAN: [103.939, 116.779, 123.68]
+# class number
+NUM_CLASS: 2
+# background label index
+BKG_LABEL: 0
+
+# Summary dir
+SUMMARY_DIR: 'summary/'
+# Model
+MODEL_DIR: 'ckpt_CNN/'
+
+TRAIN:
+  METHOD: SGD
+  LEARNING_RATE: 0.01
+  DECAY_RATE: 0.9
+  NUM_EPOCH: 500
+  SAVE_INTERVAL: 5
+  BETA: 0.001
+  BATCH_SIZE: 16
+  # weight of each label
+  CLASS_WEIGHTS: [1, 1]
+  # lr decay step
+  DECAY_STEP: 1000
+
+TEST:
+  BATCH_SIZE: 8
+
+
+

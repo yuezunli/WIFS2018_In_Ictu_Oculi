@@ -1,0 +1,36 @@
+# img_h, img_w, img_c
+IMG_SIZE: [224, 224, 3]
+# BGR pixel mean value
+#PIXEL_MEAN: [103.939, 116.779, 123.68]
+# class number
+NUM_CLASS: 2
+# background label index
+BKG_LABEL: 0
+# Class weight
+# RNN type
+RNN_TYPE: LSTM
+# Maximum sequence length
+MAX_TIME: 20
+# Hidden units in rnn
+HIDDEN_UNIT: 256
+# Summary dir
+SUMMARY_DIR: 'summary/'
+# Model
+MODEL_DIR: 'ckpt_LRCN/'
+
+TRAIN:
+  METHOD: Adam
+  LEARNING_RATE: 0.001
+  DECAY_RATE: 0.9
+  NUM_EPOCH: 300
+  SAVE_INTERVAL: 5
+  BETA: 0.001
+  BATCH_SIZE: 4
+  # weight of each label
+  CLASS_WEIGHTS: [1, 1]
+  DECAY_STEP: 1000
+TEST:
+  BATCH_SIZE: 1
+
+
+
