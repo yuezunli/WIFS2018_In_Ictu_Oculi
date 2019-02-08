@@ -152,20 +152,16 @@ def get_aligned_face_and_landmarks(im, face_cache, aligned_face_size = 256):
     """
     aligned_cur_shapes = []
     aligned_cur_im = []
-    if face_cache is None:
-        aligned_cur_shapes.append(None)
-        aligned_cur_im.append(None)
-    else:
-        for mat, points in face_cache:
-            # Get transform matrix
-            aligned_face = get_2d_aligned_face(im, mat, aligned_face_size)
-            # Mapping landmarks to aligned face
-            pred_ = np.concatenate([points, np.ones((points.shape[0], 1))], axis=-1)
-            pred_ = np.transpose(pred_)
-            aligned_pred = np.dot(mat * aligned_face_size, pred_)
-            aligned_pred = np.transpose(aligned_pred[:2, :])
-            aligned_cur_shapes.append(aligned_pred)
-            aligned_cur_im.append(aligned_face)
+    for mat, points in face_cache:
+        # Get transform matrix
+        aligned_face = get_2d_aligned_face(im, mat, aligned_face_size)
+        # Mapping landmarks to aligned face
+        pred_ = np.concatenate([points, np.ones((points.shape[0], 1))], axis=-1)
+        pred_ = np.transpose(pred_)
+        aligned_pred = np.dot(mat * aligned_face_size, pred_)
+        aligned_pred = np.transpose(aligned_pred[:2, :])
+        aligned_cur_shapes.append(aligned_pred)
+        aligned_cur_im.append(aligned_face)
 
     return aligned_cur_im, aligned_cur_shapes
 
