@@ -46,8 +46,12 @@ and put the model into `ckpt_CNN`.
   ```
 The probability of eye state will be put in `.p` file and a plot video will be generated.
 
-### Train and Test
-Under construction...
+### Train
+1. `train_blink_cnn.py` and `train_blink_lrcn.py` are training scripts for CNN and LRCN respectively.
+2. `proc_data` contains the data preparation process for training CNN and LRCN.
+3. `sample_eye_data` contains images for training CNN, `sample_sq_data` contains sequences for training LRCN.
+We collect many videos from Internet and manually annotate the eye state of each frame. 
+Due to the copyright issue, the collected set is not published. Thus I only upload an example in each folder. 
 ### Citation
 
 Please cite our paper in your publications if it helps your research:
