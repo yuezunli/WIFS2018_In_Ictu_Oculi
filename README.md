@@ -1,5 +1,6 @@
 ## In Ictu Oculi: Exposing AI Created Fake Videos by Detecting Eye Blinking
 Yuezun Li, Ming-ching Chang and Siwei Lyu \
+University at Albany, State University of New York, USA \
 IEEE International Workshop on Information Forensics and Security (WIFS), 2018 \
 [https://arxiv.org/abs/1806.02877](https://arxiv.org/abs/1806.02877)
 
@@ -62,3 +63,6 @@ Please cite our paper in your publications if it helps your research:
       Booktitle={IEEE International Workshop on Information Forensics and Security (WIFS)},
       year={2018}
     }
+
+#### Notice
+This repository is NOT for commecial use. It is provided "as it is" and we are not responsible for any subsequence of using this code.
