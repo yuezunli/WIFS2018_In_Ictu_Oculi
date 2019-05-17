@@ -143,7 +143,7 @@ def align(im, face_detector, lmark_predictor):
     return face_list
 
 
-def get_aligned_face_and_landmarks(im, face_cache, aligned_face_size = 256):
+def get_aligned_face_and_landmarks(im, face_cache, aligned_face_size = 256, padding=(0, 0)):
     """
     get all aligned faces and landmarks of all images
     :param imgs: origin images
@@ -154,11 +154,14 @@ def get_aligned_face_and_landmarks(im, face_cache, aligned_face_size = 256):
     aligned_cur_im = []
     for mat, points in face_cache:
         # Get transform matrix
-        aligned_face = get_2d_aligned_face(im, mat, aligned_face_size)
+        aligned_face = get_2d_aligned_face(im, mat, aligned_face_size, padding)
         # Mapping landmarks to aligned face
         pred_ = np.concatenate([points, np.ones((points.shape[0], 1))], axis=-1)
         pred_ = np.transpose(pred_)
-        aligned_pred = np.dot(mat * aligned_face_size, pred_)
+        mat = mat * aligned_face_size
+        mat[0, 2] += padding[0]
+        mat[1, 2] += padding[1]
+        aligned_pred = np.dot(mat, pred_)
         aligned_pred = np.transpose(aligned_pred[:2, :])
         aligned_cur_shapes.append(aligned_pred)
         aligned_cur_im.append(aligned_face)
