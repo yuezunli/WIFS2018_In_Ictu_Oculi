@@ -36,7 +36,7 @@ and put the model into `ckpt_CNN`.
   --input_vid_path=/path/to/toy_video \
   --out_dir=where_to_save_output
   ```
-3. UADFV dataset can be downloaded [here](https://drive.google.com/drive/folders/1GEk1DSxmlV_61JtpEGzC9Fo_BffvyxpH?usp=sharing).
+
 #### Toy with LRCN-VGG16 network
 1. Download pretrained model [LRCN-VGG16](https://drive.google.com/drive/folders/1gACZmcVuHL48DDCWUawxDTkSqLcLjM_j?usp=sharing) and put the model into `ckpt_LRCN`.
 2. Go to `toy` folder and run `run_cnn.py` with arguments as following. 
@@ -46,6 +46,9 @@ and put the model into `ckpt_CNN`.
   --out_dir=where_to_save_output
   ```
 The probability of eye state will be put in `.p` file and a plot video will be generated.
+
+#### UADFV dataset 
+Dataset can be downloaded [here](https://drive.google.com/drive/folders/1GEk1DSxmlV_61JtpEGzC9Fo_BffvyxpH?usp=sharing).
 
 ### Train
 1. `train_blink_cnn.py` and `train_blink_lrcn.py` are training scripts for CNN and LRCN respectively.
