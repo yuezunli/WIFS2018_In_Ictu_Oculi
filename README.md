@@ -48,7 +48,7 @@ and put the model into `ckpt_CNN`.
 The probability of eye state will be put in `.p` file and a plot video will be generated.
 
 #### UADFV dataset 
-Dataset can be downloaded [here](https://drive.google.com/drive/folders/1GEk1DSxmlV_61JtpEGzC9Fo_BffvyxpH?usp=sharing).
+Please send email to authors if you are interested in UADFV.
 
 ### Train
 1. `train_blink_cnn.py` and `train_blink_lrcn.py` are training scripts for CNN and LRCN respectively.

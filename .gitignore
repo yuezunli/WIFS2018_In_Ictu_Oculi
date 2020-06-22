@@ -15,4 +15,5 @@ data_val/
 out/
 tmp/
 test_blink*
+**/*.zip
 
