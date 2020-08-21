@@ -25,6 +25,27 @@ dlib==19.16.0
 opencv==3.4.0
 tqdm==4.19.5
 ```
+### Docker Setup (Just run the docker with all the packages already installed)
+## Install Docker
+```
+sudo apt install docker.io
+```
+## Install Nvidia Toolkit
+```
+# Add the package repositories
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
+```
+## Pull docker image and run
+```
+sudo docker pull harshhhhteen/mytense
+sudo docker run -it --gpus all -v `pwd`/WIFS2018_In_Ictu_Oculi-master:/WIFS2018_In_Ictu_Oculi-master harshhhhteen/mytense bash
+# In the container location of `toy` directory `/WIFS2018_In_Ictu_Oculi-master/toy`
+```
 
 ### Usage
 #### Toy with VGG16 network
