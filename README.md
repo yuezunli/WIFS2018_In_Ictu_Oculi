@@ -28,7 +28,7 @@ tqdm==4.19.5
 
 ### Usage
 #### Toy with VGG16 network
-1. Download pretrained models: [CNN-VGG16](https://drive.google.com/open?id=1NJ160vkLq8JCVTZC8ocsDD8VfFskDSRM)
+1. Download pretrained models: [CNN-VGG16](https://1drv.ms/u/s!As4tun0sWfKsgdJKjz0aPoaPy1QSoA?e=Ba0gHC)
 and put the model into `ckpt_CNN`.
 2. Go to `toy` folder and run `run_cnn.py` with arguments as following. 
  ```
@@ -38,7 +38,7 @@ and put the model into `ckpt_CNN`.
   ```
 
 #### Toy with LRCN-VGG16 network
-1. Download pretrained model [LRCN-VGG16](https://drive.google.com/open?id=1OJZ4mvZefwMJ7Knpsf_RFhCsA4xbAOMc) and put the model into `ckpt_LRCN`.
+1. Download pretrained model [LRCN-VGG16](https://1drv.ms/u/s!As4tun0sWfKsgdJKjz0aPoaPy1QSoA?e=Ba0gHC) and put the model into `ckpt_LRCN`.
 2. Go to `toy` folder and run `run_cnn.py` with arguments as following. 
  ```Shell
   python run_lrcn.py \
