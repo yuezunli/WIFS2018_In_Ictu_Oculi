@@ -50,6 +50,9 @@ The probability of eye state will be put in `.p` file and a plot video will be g
 #### UADFV dataset 
 Please send email to authors if you are interested in UADFV.
 
+#### EBV dataset
+Download [here](https://1drv.ms/u/s!As4tun0sWfKsgdVcYJ-nn0bw0kdjzw?e=DAcGfb).
+
 ### Train
 1. `train_blink_cnn.py` and `train_blink_lrcn.py` are training scripts for CNN and LRCN respectively.
 2. `proc_data` contains the data preparation process for training CNN and LRCN.
